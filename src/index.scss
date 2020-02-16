@@ -1,3 +1,8 @@
+// Variables
+$border-radius: 5px;
+
+
+// Styles
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -56,41 +61,35 @@ code {
   }
 }
 
-.card {
-  background-color: #fff;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 0 -1px 0 #e0e0e0, 
-              0 0 2px rgba(0, 0, 0, 0.12), 
-              0 2px 4px rgba(0, 0, 0, 0.24);
-  cursor: pointer;
-  position: relative;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 15%;
-  word-wrap: break-word;
-  overflow: hidden;
-
-  @media (max-width: 1200px) {
-    width: 25%;
-  }
-
-  @media (max-width: 1000px) {
-    width: 33%;
-  }
-
-  @media (max-width: 700px) {
-    width: 60%;
-  }
-}
-
 .portrait {
+  margin: 0;
   width: 100%;
+  border-bottom: 0.5px solid gray;
 }
 
 .card-body {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
+  margin-top: -0.3rem;
   font-size: 0.8rem;
+  text-shadow: 0.1em 0.1em 0.05em #9bcfe0;
+  font-weight: bold;
+  color: #00304a;
+  word-wrap: break-word;
+}
+
+.card-body-bg {
+  transition: 0.3s all ease;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+
+  &:hover {
+    transition: 0.3s all ease;
+    background: #1e6c86;
+
+    & > h2 {
+      transform: scale(1.3);
+      transition: 0.3s all ease;
+      color: white;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { getUser } from '../utils/utils';
+import FollowerCard from './FollowerCard';
 
 class UserPage extends React.Component {
   constructor(props) {
@@ -46,17 +47,9 @@ class UserPage extends React.Component {
             this.state.followers.map(follower => {
               console.log("Follower:", follower)
               return (
-                <div className='card' key={follower.id}>
-                  {/* Avatar img */}
-                  <img className='portrait' src={follower.avatar_url} alt={`${follower.login} on GitHub`} />
-                  {/* Follower username */}
-                  <div className='card-body'>
-                    <h2>{follower.login}</h2>
-                  </div>
-                </div>
-                )
-              })
-            }
+                  <FollowerCard data={follower} />
+              )
+            })
           }
         </div>
       </div>
