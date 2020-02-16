@@ -71,7 +71,7 @@ const FollowerCard = ({data}) => {
           {/* Link to the modal launcher */}
           <div className='card-body card-body-bg'>
             <a href={data.html_url}>
-              <h2>View GitHub Details</h2>
+              <h2>View on GitHub</h2>
             </a>
           </div>
         </CardBack>
