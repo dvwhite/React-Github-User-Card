@@ -69,9 +69,11 @@ const UserCard = ({ data }) => {
       <Row className='card'>
         {/* Profile pic column */}
         <ProfileWrapper>
-          <ProfilePic
-            src={data.avatar_url} alt={`${data.login}'s GitHub Avatar`}
-          />
+          {data.name !== undefined ? 
+            <ProfilePic
+              src={data.avatar_url} alt={`${data.login}'s GitHub Avatar`}
+            />
+            : <img src={require("./../images/githublogo.png")} className="portrait" alt="GitHub Logo" />}
         </ProfileWrapper>
         {/* Profile info column */}
         <ContentColumn>
