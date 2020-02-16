@@ -71,7 +71,7 @@ const FollowerCard = ({data}) => {
           <img className='portrait' src={require("./../images/githublogo.png")} alt="GitHub Logo" />  
           {/* Link to the modal launcher */}
           <div className='card-body card-body-bg'>
-            <h2>View Details</h2>
+            <h2>View GitHub Details</h2>
           </div>
         </CardBack>
       </Rotater>
