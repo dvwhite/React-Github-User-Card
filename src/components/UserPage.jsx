@@ -31,7 +31,7 @@ class UserPage extends React.Component {
       easing: "easeOutElastic",
       opacity: [0, 1],
       translateY: '1rem',
-      delay: (e, i) => i * 2000,
+      delay: (e, i) => i * 2500,
     }
 
     return (
