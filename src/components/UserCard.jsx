@@ -84,7 +84,7 @@ const UserCard = ({ data }) => {
           <Info>Public repos: {data.public_repos}</Info>
           <Info>Followers: {data.followers}</Info>
           <Info>Following: {data.following}</Info>
-          <Info>Bio: {data.bio}</Info>  
+          {data.bio?.length > 0 ? <Info>Bio: {data.bio}</Info> : null}  
         </ContentColumn>
       </Row>
     </Card>
