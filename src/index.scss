@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #2cb5e8;
+  background-image: linear-gradient(to bottom, #2cb5e8, #1fc8db);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.icon {
+  width: 3rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  font-size: 1.5rem;
+
+  span {
+    font-size: 2rem;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+  @media (max-width: 1000px) {
+    width: 95%;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.card {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 -1px 0 #e0e0e0, 
+              0 0 2px rgba(0, 0, 0, 0.12), 
+              0 2px 4px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15%;
+  word-wrap: break-word;
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    width: 25%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 33%;
+  }
+
+  @media (max-width: 700px) {
+    width: 60%;
+  }
+}
+
+.portrait {
+  width: 100%;
+}
+
+.card-body {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
