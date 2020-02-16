@@ -36,7 +36,7 @@ class UserPage extends React.Component {
         {/* User information */}
         <UserCard data={this.state.user} />
         <h2>{this.state.user.name || this.props.username}'s Followers</h2>
-        {/* Follower cards - click to expand into a modal */}
+        {/* Follower cards - click to go to the GH url for that user */}
         <div className='cards'>
           {
             this.state.followers.map(follower => {
