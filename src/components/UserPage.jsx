@@ -4,6 +4,7 @@ import React from 'react';
 import { getUser } from '../utils/utils';
 // Components
 import FollowerCard from './FollowerCard';
+import UserCard from './UserCard';
 
 // The main page with the GitHub API for the user and followers
 class UserPage extends React.Component {
@@ -33,7 +34,7 @@ class UserPage extends React.Component {
           <h1>GitHub API Browser</h1>
         </div>
         {/* User information */}
-
+        <UserCard data={this.state.user} />
         <h2>{this.state.user.name || this.props.username}'s Followers</h2>
         {/* Follower cards - click to expand into a modal */}
         <div className='cards'>
