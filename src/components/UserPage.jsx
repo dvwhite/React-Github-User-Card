@@ -1,7 +1,11 @@
 import React from 'react';
+
+// Utility functions
 import { getUser } from '../utils/utils';
+// Components
 import FollowerCard from './FollowerCard';
 
+// The main page with the GitHub API for the user and followers
 class UserPage extends React.Component {
   constructor(props) {
     super();
@@ -20,16 +24,6 @@ class UserPage extends React.Component {
     console.log("State updated to:", this.state)
   }
 
-  /* user shape should contain:
-    avatar_url  
-    name
-    login  
-    location
-    html_url
-    public_repos
-    followers
-    following
-  */
   render() {
     return (
       <div className='wrapper'>
