@@ -3,7 +3,6 @@ export const getUser = (username, boundContext) => {
   fetch(`https://api.github.com/users/${username}`)
     .then(res => res.json())
     .then(userData => {
-      console.log("User:", userData)
       getFollowers(userData, boundContext);
     })
     .catch(err => console.error(err))
