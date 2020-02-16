@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import './../index.scss';
 
 
@@ -71,7 +70,9 @@ const FollowerCard = ({data}) => {
           <img className='portrait' src={require("./../images/githublogo.png")} alt="GitHub Logo" />  
           {/* Link to the modal launcher */}
           <div className='card-body card-body-bg'>
-            <h2>View GitHub Details</h2>
+            <a href={data.html_url}>
+              <h2>View GitHub Details</h2>
+            </a>
           </div>
         </CardBack>
       </Rotater>

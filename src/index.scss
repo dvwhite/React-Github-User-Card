@@ -46,6 +46,11 @@ code {
   }
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .cards {
   display: flex;
   flex-flow: row wrap;
@@ -87,7 +92,7 @@ code {
     transition: 0.3s all ease;
     background: #1e6c86;
 
-    & > h2 {
+    & > a > h2 {
       transform: scale(1.2);
       transition: 0.3s all ease;
       color: white;
