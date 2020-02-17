@@ -47,7 +47,7 @@ class UserPage extends React.Component {
           <Anime {...animeProps}>
             <UserCard data={this.state.user} />
           </Anime>
-          <h2 style={{'margin-top':'5rem'}}>{this.state.user.name || this.props.username}'s Followers</h2>
+          <h2 style={{'margin-top':'1rem'}}>{this.state.user.name || this.props.username}'s Followers</h2>
           {/* Follower cards - click to go to the GH url for that user */}
           <div className='cards'>
             {

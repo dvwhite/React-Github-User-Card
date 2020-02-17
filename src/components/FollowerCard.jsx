@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import './../index.scss';
 
-
 // The component in charge of executing the animation
 const Rotater = styled.div`
   transition: 0.6s;
@@ -49,6 +48,7 @@ const CardBack = styled(Card)`
   transition: 0.3s all ease;
 
   img {
+    height: 100%;
     width: 100%;
   }
 `
