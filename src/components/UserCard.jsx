@@ -87,6 +87,12 @@ const Card = styled.div`
   top: 0;
   left: 0;
   width: 40rem;
+
+  @media (max-width: 700px) {
+    width: 95%;
+    height: auto;
+    left: 2.5%;
+  }
 `
 
 // The front face of the card
@@ -103,6 +109,14 @@ const CardBack = styled(Card)`
   position: relative;
   height: 23em;
 `
+
+const GraphWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+`
+
 // Contribution graph
 const Graph = styled.img`
   width: 95%;
@@ -140,14 +154,14 @@ const UserCard = ({ data }) => {
         </CardFront>
         {/* Back of the card */}
         <CardBack>
-          <div>
-            <h1>GitHub Contribution Graph</h1>
+          <GraphWrapper>
+            <h1 style={{'margin-top':'10%'}}>GitHub Contribution Graph</h1>
             <Graph src={`http://ghchart.rshah.org/${data.login}`} alt={`${data.login}'s GitHub Contribution Chart`} />
             <Info>Public repos: {data.public_repos}</Info>
             <a href={data.html_url}>
               <h2>View on GitHub</h2>
             </a>
-          </div>
+          </GraphWrapper>
         </CardBack>
       </Rotater>
     </RotationWrapper>
