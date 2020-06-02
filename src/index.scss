@@ -1,0 +1,114 @@
+// Variables
+$border-radius: 5px;
+
+
+// Styles
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #2cb5e8;
+  // background-image: linear-gradient(to bottom, #2cb5e8, #5ec7d3);
+  background-image: linear-gradient(to bottom, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.icon {
+  width: 3rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  font-size: 1.5rem;
+
+  h1 {
+    color: #000;
+    text-shadow: 0.05em 0.05em 0.05em gray;
+  }
+
+  span {
+    font-size: 2rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s all ease;
+
+  &:hover > h2 {
+    transform: scale(1.2);
+    transition: 0.3s all ease;
+    color: #1e6c86;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+  @media (max-width: 1000px) {
+    width: 95%;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.portrait {
+  margin: 0;
+  width: 100%;
+  background: #9bcfe0;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+  padding: 0.5rem;
+  margin-top: -0.3rem;
+  font-size: 0.8rem;
+  text-shadow: 0.1em 0.1em 0.05em #9bcfe0;
+  font-weight: bold;
+  color: #00304a;
+  word-wrap: break-word;
+}
+
+.card-body-bg {
+  transition: 0.3s all ease;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+
+  &:hover {
+    transition: 0.3s all ease;
+    background: #1e6c86;
+
+    & > a > h2 {
+      transform: scale(1.2);
+      transition: 0.3s all ease;
+      color: white;
+    }
+  }
+}
